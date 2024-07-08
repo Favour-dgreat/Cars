@@ -1,0 +1,1588 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="KZwEHEezrTFHOSsu3S9X3BbEvptAMfyAAHzL1jRm">
+    <meta itemprop="name" content="Cars.ng" />
+    <meta itemprop="url" content="https://cars.ng/" />
+
+    <meta name="author" content="Cars.ng">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://cars.ng/img/aboutbg5.png">
+    <meta property="og:image:secure_url" content="https://cars.ng/img/aboutbg5.png">
+    <meta property="og:image:type" content="image/png">
+    
+
+        <meta property="og:url" content="https://cars.ng/" />
+    <meta property="og:description"
+        content="Explore, buy and sell cars in Nigeria from our wide selection including SUVs, sedans, trucks and more from top car brands. Get the best prices on cars.ng">
+    <meta name="description"
+        content="Explore, buy and sell cars in Nigeria from our wide selection including SUVs, sedans, trucks and more from top car brands. Get the best prices on cars.ng">
+    <meta property="og:site_name" content="Cars.ng" />
+    <meta name="keywords"
+        content="car, cars, used cars, buy car, sell car, models, brands, popular cars, car prices, new cars, car types">
+        
+    <meta name="robots" content="index,follow">
+    <title>Cars.ng: Buy Or Sell Cars in Nigeria</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cars.ng/img/logos/favicon.png">
+
+
+    <!-- Scripts -->
+    
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cars.ng/img/logos/favicon.png">
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cars.ng/css/app.css" rel="stylesheet">
+    <link href="https://cars.ng/css/blog.css" rel="stylesheet">
+    <link href="https://cars.ng/css/dealerlist.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cars.ng/css/style.css">
+        
+    <style>
+        .header {
+            /* height: 675px; */
+            background: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.59)), url(https://cars.ng/img/g-wagon.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header-text {
+            /* padding-top: 215px; */
+            padding-block: 16vh;
+        }
+
+        .header-text h1 {
+            font-size: 2.2rem;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        .header p {
+            font-size: 18px;
+            margin-right: 20%;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .header-text h2 {
+            font-size: 0.9rem !important;
+        }
+
+        .header-text .credit {
+            width: 200px;
+            position: absolute;
+            /* bottom: 20px; */
+            right: 20px;
+        }
+
+
+
+        .btn-group .btn-outline-secondary {
+            border: 1px solid #ECECEE !important;
+        }
+
+        .car-type .types {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .car-brand .brands {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .car-type .card {
+            border: 0;
+        }
+
+        .car-brand .card {
+            border: 0;
+
+        }
+
+        .car-type .card,
+        .recent-cars .card,
+        .popular-car .card {
+            transition: all 0.1s ease;
+
+
+        }
+
+        .car-type .card:hover,
+        .recent-cars .card:hover,
+        .popular-car .card:hover {
+            border: 1px solid red;
+            background-color: #F2F2F2;
+            transform: translateY(-3%)
+        }
+
+        .car-brand .card:hover {
+            border: 1px solid red;
+            background-color: #F2F2F2;
+        }
+
+        .recent-cars {
+            margin: 75px 0;
+        }
+
+        .recent-cars .control,
+        .car-week .control {
+            height: 25px;
+            width: 25px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+
+
+        */ .recent-cars .carousel-item {
+            height: fit-content;
+        }
+
+        .recent-cars .active {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .recent-cars .card .desc {
+            margin-top: -10px !important;
+        }
+
+        .car-week .controls {
+            position: relative;
+            bottom: 50px;
+            right: 50px;
+            z-index: 2;
+            /* margin-top: -50px; */
+            box-sizing: border-box;
+        }
+
+        .car-week .carousel-indicators {
+            margin-right: 32vw !important;
+            margin-bottom: 45px;
+        }
+
+        .car-week .carousel-indicators li {
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+        }
+
+        .car-week .carousel-indicators .active {
+            background-color: red !important;
+        }
+
+        .car-week .carousel-item img {
+            object-fit: cover;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .gallery .card-img,
+        .gallery-mb .card-img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .gallery .card-img-overlay {
+            background: linear-gradient(180deg, rgba(51, 51, 51, 0) 24.48%, rgba(0, 0, 0, 0.72) 100%);
+        }
+
+        .gallery .gal-1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            height: 325px;
+        }
+
+        .gallery .gal-6 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            height: 325px;
+        }
+
+        .gallery .gal-4,
+        .gallery .gal-5 {
+            margin-top: -78px;
+        }
+
+        /* .gal-2, .gal-3, .gal-4, .gal-5 {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              height: 371px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
+
+        .specification {
+            font-size: 16px;
+        }
+
+        .specification h4 {
+            font-family: Bebas Neue;
+            font-size: 24px;
+        }
+
+        .allcars {
+            font-weight: 700;
+            border: 2px solid red;
+
+
+        }
+
+        .allcars:hover {
+            color: white;
+        }
+
+        p {
+            font-size: 16px;
+
+        }
+
+        @media (min-width: 768px) {}
+
+        @media (max-width: 767.98px) {
+            .car-container {
+                width: 85%;
+            }
+
+            .specification {
+                font-size: 14px;
+            }
+
+            .header {
+                height: 500px;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://cars.ng/img/g-wagon-mc.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            .header-text {
+                padding-top: 100px;
+            }
+
+            .header-text h1 {
+                font-size: 1.65rem;
+                width: 350px;
+                margin-left: 10px;
+            }
+
+            .header-text h2 {
+                font-size: 0.66rem !important;
+            }
+
+            .header-text .credit {
+                width: 170px;
+                position: absolute;
+                bottom: 5px;
+                right: 10px;
+            }
+
+            .car-type .card {
+                width: 100%;
+            }
+
+            .car-brand .card {
+                width: 50%;
+            }
+
+            .recent-cars {
+                margin: 50px 0;
+            }
+
+            .recent-cars .card {
+                width: 100%;
+                margin: 10px 5px;
+                box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
+            }
+
+            .car-week {
+                margin-bottom: 50px;
+            }
+
+            .car-week .carousel-item .row {
+                flex-direction: column-reverse;
+            }
+
+            .gallery-md .card {
+                margin-bottom: -40px;
+            }
+
+            .gal-1,
+            .gal-6,
+            .gal-2,
+            .gal-3,
+            .gal-4,
+            .gal-5 {
+                height: 371px;
+                margin-bottom: 10px !important;
+            }
+        }
+
+        .brands {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-block-start: 1rem;
+
+        }
+
+        .brand-card {
+
+            padding-block-end: 1.4rem;
+
+
+            display: grid;
+            height: 150px;
+            border: 1px solid #ccc;
+            flex: 1;
+            justify-items: center;
+            border: 1px solid #e0dede;
+            border-radius: 10px;
+            transition: all 0.1s ease-in;
+        }
+
+
+
+        .brand-card>* {
+            flex: 1;
+        }
+
+        .brand-card:hover {
+            border: 1px solid red;
+            box-sizing: border-box;
+            box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .brand-card img {
+            max-width: 80px;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .brand-card h3 {
+            margin: 0;
+            /* Remove any margin */
+            padding-top: 40px;
+
+            /* Add padding instead of margin */
+        }
+
+        .gap {
+
+            grid-row-gap: 1rem;
+            grid-column-gap: 0.5rem;
+
+        }
+
+        @media (min-width: 992.98px) {
+            .brands {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+            }
+
+            .brand-card {
+
+
+                height: 100%;
+            }
+
+            .brand-card img {
+                max-width: 100px;
+                max-height: 100%;
+            }
+
+            .gap {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 800.98px) {
+            .header-mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-inline: 1rem;
+
+
+
+
+
+            }
+
+            .header-mobile h1 {
+                font-size: 1.65rem;
+
+
+            }
+
+            .header-mobile h2 {
+                font-size: 0.7rem !important;
+            }
+
+
+        }
+    </style>
+    <style media="screen">
+        .car .card,
+        .car-type .card,
+        .cars .card {
+
+            border: 1px solid #DEDEDE;
+            border-radius: 4px;
+            margin: 10px;
+        }
+
+        .card-height-width {
+            height: 197px;
+            width: 23%;
+        }
+
+        .car-brand .card {
+            border: 1px solid #fff;
+            /* border-radius: 4px; */
+        }
+
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            color: inherit;
+        }
+
+        .auth-btns {
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        @media (min-width: 800px) {
+
+
+
+            .navbar {
+                padding-inline-start: 1.8rem !important
+            }
+
+        }
+
+        @media (max-width: 800.98px) {
+
+            .similar-cars {
+                padding: 10px;
+            }
+
+            .auth-btns {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23355006-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-23355006-4');
+    </script>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cars.ng/js/sweetalert.js"></script>
+
+
+        
+        <script src="js/accordions.js"></script>
+
+    
+    <script src="js/custom.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    
+
+    <div id="app" class="overflow-hidden">
+
+
+        <nav class="container bg-white navbar navbar-1 navbar-expand-lg navbar-light">
+            <a class="navbar-brand " href="https://cars.ng">Cars.ng</a>
+            <button class="border-0 navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                <ul class="mt-2 mr-auto navbar-nav mt-lg-0 col-md-7">
+
+
+                                        <form action="https://cars.ng/search" method="get" class="w-100 ml-3">
+                        <div class="mt-3 mb-3 input-group col-md-12 search-div">
+                            <span class="input-group-text"
+                                style="position: relative; left:10px; border-right: none; background: none;"
+                                id="basic-addon1">
+                                <i class="fa fa-search text-black-50"></i>
+                            </span>
+                            <input type="text" name="car" class="rounded shadow-none form-control"
+                                style="background: none; border-left: none;" placeholder="Search Cars.ng"
+                                aria-label="Username" aria-describedby="basic-addon1">
+
+                        </div>
+                    </form>
+                </ul>
+
+
+                <div class="auth-btns">
+                    <div class="my-2 form-inline my-lg-0">
+                        <a href="https://cars.ng/register"><button
+                                class="my-2  btn text-white btn-danger my-sm-0 bg-danger"
+                                type="submit">Start Selling</button></a>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        
+            <!-- Header -->
+    <div class="container-fluid header mobile-none">
+        <div class="container px-3 header-text d-flex flex-column align-items-center justify-content-center">
+            <h1 class="py-3  text-start text-md-center text-white font-weight-bold">
+                Explore <span class="text-danger">200,000</span>
+                cars in Nigeria for sale
+            </h1>
+            <h2 class="text-start text-md-center text-white font-weight-bold mobile-none m-0">Buy and sell cars in Nigeria
+                with ease.
+                Search, view
+                prices of cars<br>explore detailed specifications and connect with car dealers across Nigeria<br>offering
+                a
+                vast
+                selection of car brands, types, and models.</h2>
+            <h2 class="text-start text-md-center text-white font-weight-bold large-none m-0" style="text-align: justify">
+                Buy and sell
+                cars in Nigeria with ease.
+                Search, view
+                prices of cars, explore detailed specifications and connect with car dealers across Nigeria, offering
+                a
+                vast
+                selection of car brands, types, and models.</h2>
+            <form action="https://cars.ng/search" class="pt-2 w-100"method="get">
+
+                <div class=" px-0 px-lg-5 mx-0 mt-3 row col-md-12 nav-sec justify-content-start justify-content-lg-center">
+                    <div class="px-1 mx-0 my-1 col-md-6 w-md-50">
+                        <span class="px-3 py-0 bg-white input-group-text " id="basic-addon1">
+                            <i class="fa fa-search text-black-50"></i>
+
+                            <input type="text" class="my-2 border-0 rounded shadow-none form-control"
+                                placeholder="Search Cars.ng" name="car" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </span>
+                    </div>
+
+                    <div class="px-1 my-1 col-md-2 btn-group">
+                        <button class="btn btn-lg btn-danger text-white font-weight-bold" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+
+    </div>
+    <div class="header header-mobile large-none">
+
+        <h1 class="py-3   text-center text-white font-weight-bold">
+            Explore <span class="text-danger">200,000</span>
+            cars in Nigeria for sale
+        </h1>
+
+        <h2 class=" text-center text-white font-weight-bold m-0" style="text-align: justify">
+            Buy and sell
+            cars in Nigeria with ease.
+            Search, view
+            prices of cars, explore detailed specifications and connect with car dealers across Nigeria, offering
+            a
+            vast
+            selection of car brands, types, and models.</h2>
+
+
+        
+
+
+
+    </div>
+
+
+
+    <main class="container px-0">
+        <!-- Car Type -->
+        <div class="mt-5 car-type row col-md-12 mt-md-0 mx-0">
+            <div class="px-0">
+                <h2 class="px-0 font-weight-bold">Browse car types in Nigeria</h2>
+                <h3 class="px-0 mx-0 mt-0 fs-6 w-lg-75">Browse through all car categories available in Nigeria such as SUVs,
+                    sedans,
+                    trucks, and so much more.Find the best types cars for sale on Cars.ng with pictures, specs and
+                    reviews.
+                    Discover your dream vehicle today at great prices.</h3>
+            </div>
+
+            <div class="flex-wrap pl-lg-1 pr-lg-4  pr-0 types row d-flex justify-content-center">
+                                                        
+                    <div class="px-3 pt-2 pb-5 card card-height-width text-dark mx-auto overflow-hidden">
+                        <a href="https://cars.ng/suvs" class="m-auto">
+                            <img src="https://cars.ng/images/cars-ng/categorie_202210_1_1.png"
+                                class="card-img  rounded mx-auto img-fluid text-center" alt="suv"
+                                style="object-fit: contain">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-around">
+                                <h4 class="pb-3 card-text text-black text-center font-weight-bold"
+                                    style="font-size: 0.75rem;"> Popular
+                                    Suv
+                                    Cars in
+                                    Nigeria</h4>
+                            </div>
+                        </a>
+                    </div>
+                                                        
+                    <div class="px-3 pt-2 pb-5 card card-height-width text-dark mx-auto overflow-hidden">
+                        <a href="https://cars.ng/vans" class="m-auto">
+                            <img src="https://cars.ng/images/cars-ng/categorie_255673_1_1.png"
+                                class="card-img  rounded mx-auto img-fluid text-center" alt="van"
+                                style="object-fit: contain">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-around">
+                                <h4 class="pb-3 card-text text-black text-center font-weight-bold"
+                                    style="font-size: 0.75rem;"> Popular
+                                    Van
+                                    Cars in
+                                    Nigeria</h4>
+                            </div>
+                        </a>
+                    </div>
+                                                        
+                    <div class="px-3 pt-2 pb-5 card card-height-width text-dark mx-auto overflow-hidden">
+                        <a href="https://cars.ng/coupes" class="m-auto">
+                            <img src="https://cars.ng/images/cars-ng/categorie_619803_1_1.png"
+                                class="card-img  rounded mx-auto img-fluid text-center" alt="coupe"
+                                style="object-fit: contain">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-around">
+                                <h4 class="pb-3 card-text text-black text-center font-weight-bold"
+                                    style="font-size: 0.75rem;"> Popular
+                                    Coupe
+                                    Cars in
+                                    Nigeria</h4>
+                            </div>
+                        </a>
+                    </div>
+                                                        
+                    <div class="px-3 pt-2 pb-5 card card-height-width text-dark mx-auto overflow-hidden">
+                        <a href="https://cars.ng/hatchbacks" class="m-auto">
+                            <img src="https://cars.ng/images/cars-ng/categorie_344141_1_1.png"
+                                class="card-img  rounded mx-auto img-fluid text-center" alt="hatchback"
+                                style="object-fit: contain">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-around">
+                                <h4 class="pb-3 card-text text-black text-center font-weight-bold"
+                                    style="font-size: 0.75rem;"> Popular
+                                    Hatchback
+                                    Cars in
+                                    Nigeria</h4>
+                            </div>
+                        </a>
+                    </div>
+                                                        
+                    <div class="px-3 pt-2 pb-5 card card-height-width text-dark mx-auto overflow-hidden">
+                        <a href="https://cars.ng/sedans" class="m-auto">
+                            <img src="https://cars.ng/images/cars-ng/categorie_714150_1_1.png"
+                                class="card-img  rounded mx-auto img-fluid text-center" alt="sedan"
+                                style="object-fit: contain">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-around">
+                                <h4 class="pb-3 card-text text-black text-center font-weight-bold"
+                                    style="font-size: 0.75rem;"> Popular
+                                    Sedan
+                                    Cars in
+                                    Nigeria</h4>
+                            </div>
+                        </a>
+                    </div>
+                                                        
+                    <div class="px-3 pt-2 pb-5 card card-height-width text-dark mx-auto overflow-hidden">
+                        <a href="https://cars.ng/crossovers" class="m-auto">
+                            <img src="https://cars.ng/images/cars-ng/categorie_678683_1_1.png"
+                                class="card-img  rounded mx-auto img-fluid text-center" alt="crossover"
+                                style="object-fit: contain">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-around">
+                                <h4 class="pb-3 card-text text-black text-center font-weight-bold"
+                                    style="font-size: 0.75rem;"> Popular
+                                    Crossover
+                                    Cars in
+                                    Nigeria</h4>
+                            </div>
+                        </a>
+                    </div>
+                                                        
+                    <div class="px-3 pt-2 pb-5 card card-height-width text-dark mx-auto overflow-hidden">
+                        <a href="https://cars.ng/electrics" class="m-auto">
+                            <img src="https://cars.ng/images/cars-ng/categorie_252435_1_1.png"
+                                class="card-img  rounded mx-auto img-fluid text-center" alt="electric"
+                                style="object-fit: contain">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-around">
+                                <h4 class="pb-3 card-text text-black text-center font-weight-bold"
+                                    style="font-size: 0.75rem;"> Popular
+                                    Electric
+                                    Cars in
+                                    Nigeria</h4>
+                            </div>
+                        </a>
+                    </div>
+                                                        
+                    <div class="px-3 pt-2 pb-5 card card-height-width text-dark mx-auto overflow-hidden">
+                        <a href="https://cars.ng/trucks" class="m-auto">
+                            <img src="https://cars.ng/images/cars-ng/categorie_211566_1_1.png"
+                                class="card-img  rounded mx-auto img-fluid text-center" alt="truck"
+                                style="object-fit: contain">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-around">
+                                <h4 class="pb-3 card-text text-black text-center font-weight-bold"
+                                    style="font-size: 0.75rem;"> Popular
+                                    Truck
+                                    Cars in
+                                    Nigeria</h4>
+                            </div>
+                        </a>
+                    </div>
+                            </div>
+            <!-- <br> -->
+            <a href="https://cars.ng/electrics"
+                class="py-3 text-decoration-none text-dark font-weight-bold">
+                See all categories <i class="ml-3 fa fa-angle-right text-black-50"></i>
+            </a>
+        </div>
+
+        <!-- Recently added Cars -->
+        <div class="px-0 ml-2 col-md-12 recent-cars">
+            <div class="px-1">
+                <h2 class="font-weight-bold para">Recently Added Cars</h2>
+                <h3 class="m-0 para fs-6">See our updated list of the most recent cars on the market. Find the latest on car
+                    prices, reviews, pictures and specs.</h3>
+            </div>
+            <div class="row mx-auto justify-content-center">
+                <style>
+    .car-body {
+        font-weight: bold;
+    }
+
+    .car-body h3 {
+        font-size: 14px;
+    }
+
+    .card-text {
+        font-weight: bold;
+
+    }
+</style>
+
+            </div>
+            <div class="mt-5 text-center col ">
+
+                <a class="btn btn-outline-danger allcars " href="/for-sale">View all Cars for sale
+                </a>
+
+            </div>
+
+
+
+
+
+
+            <!-- Car Brands -->
+            <div class="mt-5 resize car-brand row col-md-12 mt-md-0  ">
+                <div class=" px-0">
+                    <h2 class=" font-weight-bold">Browse cars by brands</h2>
+                    <h3 class="px-0 mx-0 mt-0 fs-6">Browse from our list of numerous car brands available in Nigeria.
+                        Explore our
+                        collection of brand new cars, tokunbo and Nigerian-used cars.</h3>
+                </div>
+                <div class=" pl-0 brands gap ">
+
+                                                                    <div class="">
+                            <a href="https://cars.ng/audi" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_413135_1.png"
+                                            class="mt-3  img-fluid" alt="audi">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Audi</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/nissan" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_331550_1.png"
+                                            class="mt-3  img-fluid" alt="nissan">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Nissan</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/kia" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_424187_1.png"
+                                            class="mt-3  img-fluid" alt="kia">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Kia</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/bmw" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_980189_1.png"
+                                            class="mt-3  img-fluid" alt="bmw">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Bmw</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/ford" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_734802_1.png"
+                                            class="mt-3  img-fluid" alt="ford">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Ford</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/mercedes-benz" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_835479_1.png"
+                                            class="mt-3  img-fluid" alt="mercedes-benz">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Mercedes-benz</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/lexus" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_982523_1.png"
+                                            class="mt-3  img-fluid" alt="lexus">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Lexus</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/hyundai" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_464983_1.png"
+                                            class="mt-3  img-fluid" alt="hyundai">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Hyundai</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/honda" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_203043_1.png"
+                                            class="mt-3  img-fluid" alt="honda">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Honda</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/volkswagen" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_862755_1.png"
+                                            class="mt-3  img-fluid" alt="volkswagen">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Volkswagen</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/toyota" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_172161_1.png"
+                                            class="mt-3  img-fluid" alt="toyota">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Toyota</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/mazda" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_756270_1.png"
+                                            class="mt-3  img-fluid" alt="mazda">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Mazda</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/chevrolet" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_852978_1.png"
+                                            class="mt-3  img-fluid" alt="chevrolet">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Chevrolet</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/peugeot" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_774668_1.png"
+                                            class="mt-3  img-fluid" alt="peugeot">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Peugeot</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="">
+                            <a href="https://cars.ng/acura" class="w- text-decoration-none">
+                                <div class="brand-card ">
+                                    <div>
+                                        <img src="https://cars.ng/images/cars-ng/categorie_420973_1.png"
+                                            class="mt-3  img-fluid" alt="acura">
+                                    </div>
+
+
+                                    <h3 class=" font-weight-bold fs-6">Acura</h3>
+
+                                </div>
+                            </a>
+                        </div>
+                    
+
+                </div>
+                <a href="https://cars.ng/brands" class="py-3 mt-3 text-decoration-none text-dark font-weight-bold fs-5">
+                    Show all brands <i class="ml-3 fa fa-angle-right text-black-50"></i>
+                </a>
+            </div>
+
+            <div class="px-0 col-md-12 recent-cars ">
+                <div class="ml-2">
+                    <span class="px-3">
+                        <h2 class="font-weight-bold para">Popular Cars in Nigeria</h2>
+                        <h3 class="m-0 para fs-6">Check out the most popular cars in Nigeria including the best-selling and
+                            cheapest
+                            cars in Nigeria, all brands and models inclusive.
+                            See their prices online!</h3>
+                    </span>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <style>
+    .car-body {
+        font-weight: bold;
+    }
+
+    .car-body h3 {
+        font-size: 14px;
+    }
+
+    .card-text {
+        font-weight: bold;
+
+    }
+</style>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+        <!-- ***** Blog Start ***** -->
+        
+
+
+
+        <!-- Future Cars -->
+        
+
+        
+        
+        
+        
+
+        <style>
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+
+
+
+    }
+
+    @media screen and (max-width: 576px) {
+
+
+        .all-price {
+            padding-inline-start: 1rem !important;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .wrapper {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .wrapper {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+</style>
+<div class="px-0 col-md-12 all-price">
+    <div class="">
+        <span class="px-3">
+            <h2 class="font-weight-bold para">Car Prices in Nigeria</h2>
+            <h3 class="m-0 para fs-5">Get the prices and latest information of brand new, foreign used and Nigerian
+                used cars by car brand, car model or car type available in Nigeria.</h3>
+        </span>
+    </div>
+    <div class="wrapper">
+                <div>
+            <h3 class="fw-bold">Toyota Prices In Nigeria</h3>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/toyota/camry/2018/pricing" class="">
+                        Toyota Camry price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/toyota/corolla/2020/pricing" class="">
+                        Toyota Corolla price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/toyota/avalon/2020/pricing" class="">
+                        Toyota Avalon price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/toyota/prius-prime/2019/pricing" class="">
+                        Toyota Prius-Prime price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="toyota/solara/2006/pricing" class="">
+                        Toyota Solara price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/toyota/mirai/2021/pricing" class="">
+                        Toyota Mirai price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/toyota/venza/2021/pricing" class="">
+                        Toyota Venza price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/toyota/tundra/2020/pricing" class="">
+                        Toyota Tundra price in Nigeria
+                    </a>
+                </p>
+                    </div>
+                <div>
+            <h3 class="fw-bold">BMW Prices In Nigeria</h3>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/bmw/x1/2020/pricing">
+                        Bmw X1 price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/bmw/z4/2020/pricing">
+                        Bmw Z4 price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/bmw/m4/2020/pricing">
+                        Bmw M4 price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/bmw/8-series/2021/pricing">
+                        Bmw 8-Series price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/bmw/m5/2020/pricing">
+                        Bmw M5 price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/bmw/x3m-competition/2020/pricing">
+                        Bmw X3m-Competition price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/bmw/x7/2020/pricing">
+                        Bmw X7 price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/bmw/4-series/2020/pricing">
+                        Bmw 4-Series price in Nigeria
+                    </a>
+                </p>
+                    </div>
+        
+        <div>
+            <h3 class="fw-bold">Honda Prices In Nigeria</h3>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/honda/pilot/2020/pricing">
+                        Honda Pilot price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/honda/civic/2021/pricing">
+                        Honda Civic price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/honda/accord/2020/pricing">
+                        Honda Accord price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/honda/crosstour/2019/pricing">
+                        Honda Crosstour price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/honda/passport/2020/pricing">
+                        Honda Passport price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/honda/insight/2020/pricing">
+                        Honda Insight price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/honda/cr-v/2020/pricing">
+                        Honda CR-V price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/honda/clarity/2020/pricing">
+                        Honda Clarity price in Nigeria
+                    </a>
+                </p>
+                    </div>
+                <div>
+            <h3 class="fw-bold">Lexus Prices In Nigeria</h3>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/lexus/rx/2021/pricing">
+                        Lexus Rx price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/lexus/ux-hybrid/2021/pricing">
+                        Lexus UX Hybrid price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/lexus/gs-f/2018/pricing">
+                        Lexus GS F price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/lexus/gx-470/2021/pricing">
+                        Lexus Gx 470 price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/lexus/nx200t/2021/pricing">
+                        Lexus Nx200t price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/lexus/ct-hybrid/2020/pricing">
+                        Lexus CT Hybrid price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/lexus/lc/2021/pricing">
+                        Lexus LC price in Nigeria
+                    </a>
+                </p>
+                            <p class="fs-6 m-0 mb-2 mb-lg-3">
+                    <a href="/lexus/ux/2021/pricing">
+                        Lexus UX price in Nigeria
+                    </a>
+                </p>
+                    </div>
+
+    </div>
+
+
+
+</div>
+    </main>
+
+    </div>
+    <footer>
+                <div class="container px-0 footer">
+            <div class="ml-auto mr-auto subscribe">
+                <h2>Want to know what’s hot on Cars.ng?</h2>
+                <p>Subscribe to our newsletter and be the first to know</p>
+
+                <form method="POST" action="https://cars.ng/newsletter/submit" id="newsletter"
+                    class="my-2 form-inline my-lg-0">
+                    <input type="hidden" name="_token" value="KZwEHEezrTFHOSsu3S9X3BbEvptAMfyAAHzL1jRm">                    <input class="shadow-none form-control mr-sm-2 col-md-4 footer-email" id="name"
+                        type="text" name="name" required placeholder="Enter name" aria-label="name">
+                    <input class="shadow-none form-control mr-sm-2 col-md-5 footer-email" id="email"
+                        type="email" name="email" required placeholder="Enter email" aria-label="email">
+                    <button class="my-2 btn btn-danger my-sm-0 newsletter-sub text-white"
+                        type="submit">Submit</button>
+                </form>
+
+            </div>
+            <div class="footer-links row">
+                <div class="col-sm-3">
+                    <h3 class="fs-5">Company</h3>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none" href="https://cars.ng/about">About us</a>
+                    </h4>
+                    
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none" href="/faq">FAQ</a>
+                    </h4>
+                    <h4 class="fs-6">
+                        <a class="text-decoration-none" href="https://hng.tech/internship">HNG Internship</a>
+                    </h4>
+                </div>
+                <div class="col-sm-3">
+                    <h3 class="fs-5">Most Researched Car</h3>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none"
+                            href="/toyota/camry/2018/pricing ">Toyota Camry</a>
+                    </h4>
+                    <h4 class="fs-6">
+                        <a class="text-decoration-none"
+                            href="/honda/accord/2020/pricing ">Honda Accord</a>
+                    </h4>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none"
+                            href="/kia/rio/2020/pricing  ">Kia Rio</a>
+                    </h4>
+
+                    <h4 class="fs-6">
+                        <a class="text-decoration-none"
+                            href="/toyota/corolla/2020/pricing ">Toyota Corolla</a>
+                    </h4>
+
+                </div>
+                <div class="col-sm-3">
+                    <h3 class="fs-5">Location</h3>
+                    <h4 class="fs-6">
+                        13 Command Road,Yaba
+                        <br> Lagos,Nigeria
+
+                    </h4>
+                </div>
+                <div class="col-sm-3">
+                    <h3 class="fs-5">Contact</h3>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none" href="tel:+2341234567890">+234 123 456 7890</a>
+
+                    </h4>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none" href="mailto:Hello@cars.ng">Hello@cars.ng</a>
+
+                    </h4>
+                </div>
+            </div>
+            <hr class="border-0 bg-whit">
+            <p id="copyright">Copyright © 2024 Cars.ng</p>
+        </div>
+    </footer>
+
+        <script>
+        // const a = jQuery.noConflict();
+        document.getElementById('newsletter').addEventListener('submit', function(event) {
+            // event.preventDefault(); // prevent the form from submitting normally
+
+        });
+
+        // $(document).ready(function(){
+        //   $.ajaxSetup({
+        //     headers: {
+        //       'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+        //     }
+        //   });
+        //   $('.newsletter-sub').on('click', function () {
+        //     let email_re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        //     if ( $("#email-1").val() && $("#name-1").val() ) {
+        //       var email = $("#email-1").val()
+        //       var name = $("#name-1").val()
+        //       var type = $("#type").val()
+        //       var car_id = $("#car_id").val()
+        //     } else {
+        //       var email = $("#email").val()
+        //       var name = $("#name").val()
+        //     }
+
+        //     if ( (name?.length ?? 0) < 3 ) {
+        //       return swal({
+        //         title: 'Failed!!',
+        //         text: 'Name should be at least three characters',
+        //         icon: 'error'
+        //       })
+        //     } else if (!email_re.test(email.toLowerCase())) {
+        //       return swal({
+        //         title: 'Failed!!',
+        //         text: 'Please enter a valid email address',
+        //         icon: 'error'
+        //       })
+        //     }
+        //     $.ajax({
+        //       type: 'POST',
+        //       url: 'https://cars.ng/newsletter',
+        //       data: {name, email : email, car_id : car_id, type:type},
+        //       dataType: 'json',
+        //       success: function (data) {
+        //         if (data.status === 'successful') {
+        //           return swal({
+        //             title: 'Success!!',
+        //             text: "Your subscription was successful",
+        //             icon: 'success'
+        //           }).then(
+        //             (e) => {
+        //               $("#email").val('')
+        //               $("#email-1").val('')
+        //               $("#name-1").val('')
+        //             }
+        //           )
+        //         }
+
+        //         if (data.status === 'already') {
+        //           return swal({
+        //             title: 'Success!!',
+        //             text: "Your subscription was already saved",
+        //             icon: 'success'
+        //           }).then(
+        //             (e) => {
+        //               $("#email").val('')
+        //               $("#email-1").val('')
+        //               $("#name-1").val('')
+        //             }
+        //           )
+        //         }
+        //       },
+
+        //       error: function (data) {
+        //         return swal({
+        //           title: 'Failed!!',
+        //           text: 'Error occurred saving subscription, please try again.',
+        //           icon: 'error'
+        //         })
+        //       }
+        //     });
+        //   })
+
+        $('.year-variants').slick({
+        infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 5,
+        arrows: true,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 4
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 580,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+        });
+        })
+    </script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script> -->
+    <script src="https://cars.ng/js/zooming.js"></script>
+    <script src="https://cars.ng/js/dealerlist.js"></script>
+    <script>
+        //Zoom gallery image
+        new Zooming().listen('.gal-zoom');
+    </script>
+
+    <script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'KZwEHEezrTFHOSsu3S9X3BbEvptAMfyAAHzL1jRm';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+</body>
+
+</html>

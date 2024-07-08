@@ -1,0 +1,1381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="KZwEHEezrTFHOSsu3S9X3BbEvptAMfyAAHzL1jRm">
+    <meta itemprop="name" content="Cars.ng" />
+    <meta itemprop="url" content="https://cars.ng/" />
+
+    <meta name="author" content="Cars.ng">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://cars.ng/img/aboutbg5.png">
+    <meta property="og:image:secure_url" content="https://cars.ng/img/aboutbg5.png">
+    <meta property="og:image:type" content="image/png">
+    
+
+        <meta name="description"
+        content="Find and buy cars for sale in Nigeria. See prices, specs, year and get the best offers for s.">
+
+
+    <meta property="og:description"
+        content="Find and buy cars for sale in Nigeria. See prices, specs, year and get the best offers for s.">
+    
+    <meta property="og:url" content="https://cars.ng/for-sale?search=toyota-corolla" />
+    <meta property="og:site_name" content="cars in Nigeria" />
+    <meta name="keywords"
+        content="car, cars, used cars, buy car, sell car, models, brands, popular cars, car prices, new cars, car types, car brands in Nigeria,all car brands in Nigeria, best car brands in Nigeria, cars">
+        
+    <meta name="robots" content="index,follow">
+    <title>    Cars for sale in Nigeria
+</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cars.ng/img/logos/favicon.png">
+
+
+    <!-- Scripts -->
+    
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cars.ng/img/logos/favicon.png">
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cars.ng/css/app.css" rel="stylesheet">
+    <link href="https://cars.ng/css/blog.css" rel="stylesheet">
+    <link href="https://cars.ng/css/dealerlist.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cars.ng/css/style.css">
+        <style media="screen">
+        .car .card,
+        .car-type .card,
+        .cars .card {
+
+            border: 1px solid #DEDEDE;
+            border-radius: 4px;
+            margin: 10px;
+        }
+
+        .card-height-width {
+            height: 197px;
+            width: 23%;
+        }
+
+        .car-brand .card {
+            border: 1px solid #fff;
+            /* border-radius: 4px; */
+        }
+
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            color: inherit;
+        }
+
+        .auth-btns {
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        @media (min-width: 800px) {
+
+
+
+            .navbar {
+                padding-inline-start: 1.8rem !important
+            }
+
+        }
+
+        @media (max-width: 800.98px) {
+
+            .similar-cars {
+                padding: 10px;
+            }
+
+            .auth-btns {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23355006-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-23355006-4');
+    </script>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cars.ng/js/sweetalert.js"></script>
+
+
+        
+    </head>
+
+<body>
+    
+
+    <div id="app" class="overflow-hidden">
+
+
+        <nav class="container bg-white navbar navbar-1 navbar-expand-lg navbar-light">
+            <a class="navbar-brand " href="https://cars.ng">Cars.ng</a>
+            <button class="border-0 navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                <ul class="mt-2 mr-auto navbar-nav mt-lg-0 col-md-7">
+
+
+                                        <form action="https://cars.ng/search" method="get" class="w-100 ml-3">
+                        <div class="mt-3 mb-3 input-group col-md-12 search-div">
+                            <span class="input-group-text"
+                                style="position: relative; left:10px; border-right: none; background: none;"
+                                id="basic-addon1">
+                                <i class="fa fa-search text-black-50"></i>
+                            </span>
+                            <input type="text" name="car" class="rounded shadow-none form-control"
+                                style="background: none; border-left: none;" placeholder="Search Cars.ng"
+                                aria-label="Username" aria-describedby="basic-addon1">
+
+                        </div>
+                    </form>
+                </ul>
+
+
+                <div class="auth-btns">
+                    <div class="my-2 form-inline my-lg-0">
+                        <a href="https://cars.ng/register"><button
+                                class="my-2  btn text-white btn-danger my-sm-0 bg-danger"
+                                type="submit">Start Selling</button></a>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </nav>
+
+                                        
+            <style>
+        .container {
+            padding-inline: 0rem !important;
+        }
+
+        .fs-9 {
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 23% 1fr;
+            gap: 1rem;
+            margin-block: 2rem;
+
+        }
+
+
+        .all-offers h3 {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .input-wrapper {
+            border: 1px solid #DEE2E6 !important;
+            width: 85%;
+            border-radius: 10px;
+            padding-block: .4rem;
+        }
+
+        .filter {
+            background: #FCDAD2;
+            border-radius: 30px;
+            padding-block: .8rem;
+            padding-inline: 1rem;
+            width: fit-content;
+            margin-block: 1rem;
+            font-size: .8rem;
+            height: fit-content;
+        }
+
+
+
+        .seller-info {
+
+            object-fit: cover;
+        }
+
+        .seller {
+            margin-inline-end: 1rem;
+
+        }
+
+        .seller img {
+            object-fit: cover;
+            border-radius: 10%;
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .filter-wrapper {
+            border: 1px solid #DEE2E6 !important;
+            padding-block: 3rem;
+            padding-inline: 1rem;
+
+        }
+
+
+
+        .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+            background-color: red;
+            border-color: red;
+        }
+
+        input::placeholder {
+            font-size: 11px;
+            /* Set the desired font size here */
+        }
+
+        .card {
+            border-radius: 2px;
+            background: #fff;
+            transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+
+
+
+        }
+
+        .card-img-overlay:hover {
+            border: none !important
+        }
+
+        .card-img-overlay {
+            border: none !important
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .06);
+        }
+
+        .card-img-top {
+            width: 440px;
+            height: 220px;
+        }
+
+        .seller-info {
+            margin-block: 0.9rem;
+            padding: 0rem;
+            padding-inline: 0.4rem;
+            object-fit: cover;
+        }
+
+        .seller {
+            margin-inline-end: 0.4rem;
+
+        }
+
+        .seller img {
+            object-fit: cover;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+
+        }
+
+        .center {
+            margin-inline: auto !important;
+        }
+
+        .fs-7 {
+            font-size: 0.6rem !important;
+            font-weight: 300 !important;
+        }
+
+        .fs-8 {
+            font-size: 0.55rem !important;
+            font-weight: 300 !important;
+        }
+
+        #resetFiltersButton:focus {
+            outline: none;
+
+            box-shadow: none;
+
+        }
+
+        #resetFiltersButton {
+
+            background: none;
+            color: #FCDAD2;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-block-end: 1rem;
+        }
+
+        .desktop-form {
+            display: block;
+            height: fit-content;
+        }
+
+        .mobile-form {
+            display: none;
+        }
+
+        .mobile-modal {
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+                margin-top: 0.5rem;
+            }
+
+            .filter-wrapper {
+                border: 0px solid #DEE2E6 !important;
+                padding-block: 0rem;
+                padding-inline: 0rem;
+
+            }
+
+            .mobile-modal {
+                display: block;
+            }
+
+            .desktop-form {
+                display: none;
+            }
+
+            .mobile-form {
+                display: block;
+            }
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+
+
+
+
+
+
+
+    <main class="container my-3 ">
+        <div class="row">
+
+                            <h1 class="font-weight-bolder fs-3 mb-1">Cars for sale in Nigeria</h1>
+                                        <h2 class="fs-6 mt-2">Find and buy cars for sale in Nigeria</h2>
+            
+        </div>
+        
+        <style>
+    .sticky-button {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        width: 90%;
+    }
+</style>
+<section>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary text-white mobile-modal sticky-button" data-toggle="modal"
+        data-target="#staticBackdrop">
+        <i class="fas fa-filter"></i>
+        Fiter search results
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Filter Search Results</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="filter-wrapper mobile-form" id="mobileFilterForm">
+
+                        <section class="d-flex flex-column gap-1">
+                            <p class="font-weight-bold fs-6 mb-0">
+                                Price
+                            </p>
+                            <div>
+                                <span class="fs-9">From</span>
+                                <input type="text" id="mobileMinPriceFilter" class="form-control bg-white"
+                                    placeholder="Enter a number" aria-label="Number input"
+                                    aria-describedby="number-addon">
+                            </div>
+                            <div class="mb-3">
+                                <span class="fs-9">Until</span>
+                                <input type="text" id="mobileMaxPriceFilter" class="form-control bg-white"
+                                    placeholder="Enter a number" aria-label="Number input"
+                                    aria-describedby="number-addon">
+                            </div>
+                            <section class="my-2 border-top pt-3">
+                                <p class="font-weight-bold fs-6 mb-0">
+                                    Location
+                                </p>
+                                <p class="fs-9">
+                                    You can add multiple options
+                                </p>
+                                <div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="mobileLocation"
+                                            value="jos" id="mobileCheckbox1">
+                                        <label class="custom-control-label" for="mobileCheckbox1"
+                                            class="fs-6">Jos</label>
+                                    </div>
+                                    <!-- Repeat for other location checkboxes -->
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="mobileLocation"
+                                            value="lagos" id="mobileCheckbox2">
+                                        <label class="custom-control-label" for="mobileCheckbox2">Lagos</label>
+                                    </div>
+                                    <!-- Repeat for other location checkboxes -->
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="mobileLocation"
+                                            value="abuja" id="mobileCheckbox3">
+                                        <label class="custom-control-label" for="mobileCheckbox3">Abuja</label>
+                                    </div>
+                                    <!-- Repeat for other location checkboxes -->
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="mobileLocation"
+                                            value="akwa ibom" id="mobileCheckbox4">
+                                        <label class="custom-control-label" for="mobileCheckbox4">Akwa Ibom</label>
+                                    </div>
+                                    <!-- Repeat for other location checkboxes -->
+                                </div>
+                                <!-- Other location elements -->
+                            </section>
+                                                            <section class="my-2 border-top pt-3">
+                                    <p class="font-weight-bold fs-6 mb-0">
+                                        Brands
+                                    </p>
+                                    <p class="fs-9">
+                                        You can add multiple options
+                                    </p>
+                                    <div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="mobileBrand"
+                                                value="toyota" id="mobileBrand1">
+                                            <label class="custom-control-label" for="mobileBrand1">Toyota</label>
+                                        </div>
+                                        <!-- Repeat for other brand checkboxes -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="mobileBrand"
+                                                value="honda" id="mobileBrand2">
+                                            <label class="custom-control-label" for="mobileBrand2">Honda</label>
+                                        </div>
+                                        <!-- Repeat for other brand checkboxes -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="mobileBrand"
+                                                value="mercedes-benz" id="mobileBrand3">
+                                            <label class="custom-control-label"
+                                                for="mobileBrand3">Mercedes-Benz</label>
+                                        </div>
+                                        <!-- Repeat for other brand checkboxes -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="mobileBrand"
+                                                value="kia" id="mobileBrand4">
+                                            <label class="custom-control-label" for="mobileBrand4">Kia</label>
+                                        </div>
+                                        <!-- Repeat for other brand checkboxes -->
+                                    </div>
+                                    <!-- Other brand elements -->
+                                </section>
+                                <section class="my-2 border-top pt-3">
+                                    <p class="font-weight-bold fs-6 mb-0">
+                                        Build Type
+                                    </p>
+                                    <p class="fs-9">
+                                        You can add multiple options
+                                    </p>
+                                    <div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="mobileBuildType1">
+                                            <label class="custom-control-label" for="mobileBuildType1">Sedan</label>
+                                        </div>
+                                        <!-- Repeat for other build type checkboxes -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="mobileBuildType2">
+                                            <label class="custom-control-label" for="mobileBuildType2">SUV</label>
+                                        </div>
+                                        <!-- Repeat for other build type checkboxes -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="mobileBuildType3">
+                                            <label class="custom-control-label" for="mobileBuildType3">Trucks</label>
+                                        </div>
+                                        <!-- Repeat for other build type checkboxes -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="mobileBuildType4">
+                                            <label class="custom-control-label" for="mobileBuildType4">Jeeps</label>
+                                        </div>
+                                        <!-- Repeat for other build type checkboxes -->
+                                    </div>
+                                    <!-- Other build type elements -->
+                                </section>
+                                                    </section>
+                        <button class="btn text-decoration-underline text-danger my-2" data-dismiss="modal"
+                            type="button" id="mobileResetFiltersButton">
+                            Reset
+                        </button>
+                        <button class="btn btn-danger my-3 text-white my-sm-0 w-100" type="button"
+                            data-dismiss="modal" id="mobileSubmitFiltersButton">
+                            <i class="fa fa-search text-white mr-2"></i>
+                            Apply filters
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to format the number with commas
+        function formatNumberWithCommas(value) {
+            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        // Get the input elements
+        const priceInput = document.getElementById('mobileMinPriceFilter');
+        const priceInput2 = document.getElementById('mobileMaxPriceFilter');
+
+        // Listen for the 'input' event and format the number with commas
+        priceInput.addEventListener('input', function() {
+            const formattedValue = formatNumberWithCommas(this.value.replace(/,/g, ''));
+            this.value = formattedValue;
+        });
+
+        priceInput2.addEventListener('input', function() {
+            const formattedValue = formatNumberWithCommas(this.value.replace(/,/g, ''));
+            this.value = formattedValue;
+        });
+
+        // Adding event listener to a button to apply the filter
+        document.getElementById("mobileSubmitFiltersButton").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const locationValues = getCheckboxValues("mobileLocation");
+            const brandValues = getCheckboxValues("mobileBrand");
+            const minPriceFilterInput = document.getElementById("mobileMinPriceFilter");
+            const minPriceFilterValue = parseFloat(minPriceFilterInput.value.replace(/,/g, '').replace(
+                /\s/g, ''));
+            const minPriceFilter = minPriceFilterValue;
+
+            const maxPriceFilterInput = document.getElementById("mobileMaxPriceFilter");
+            const maxPriceFilterValue = parseFloat(maxPriceFilterInput.value.replace(/,/g, '').replace(
+                /\s/g, ''));
+            const maxPriceFilter = maxPriceFilterValue;
+
+            const filteredArray = alloffers.filter(function(item) {
+                let priceCheck = true;
+                let locationCheck = true;
+                let brandCheck = true;
+
+                if (minPriceFilter && maxPriceFilter) {
+                    const price = parseFloat(item._source.prices.actual.NGN);
+                    priceCheck = minPriceFilter <= price && price <= maxPriceFilter;
+                }
+
+                if (locationValues.length) {
+                    const location = item._source.supplier_state;
+                    locationCheck = locationValues.includes(location.toLowerCase());
+                }
+
+                if (brandValues.length) {
+                    const brand = item._source.categories.brand[0];
+                    brandCheck = brandValues.includes(brand.toLowerCase());
+                }
+
+                result = priceCheck && locationCheck && brandCheck;
+                return result;
+            });
+
+            updateCarListComponent(filteredArray);
+        });
+
+        document.getElementById("mobileResetFiltersButton").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            // Clear filter values for location and brand
+            const locationCheckboxes = document.querySelectorAll(
+                'input[type="checkbox"][name="mobileLocation"]:checked');
+            locationCheckboxes.forEach((checkbox) => {
+                checkbox.checked = false;
+            });
+
+            const brandCheckboxes = document.querySelectorAll(
+                'input[type="checkbox"][name="mobileBrand"]:checked');
+            brandCheckboxes.forEach((checkbox) => {
+                checkbox.checked = false;
+            });
+
+            // Clear input fields for min and max price filters
+            document.getElementById("mobileMinPriceFilter").value = '';
+            document.getElementById("mobileMaxPriceFilter").value = '';
+
+            // Display all cars again
+            updateCarListComponent(alloffers);
+        });
+    });
+</script>
+
+        <section class="wrapper">
+            <form class="filter-wrapper desktop-form" id="filterForm">
+                <p class="font-weight-bold fs-6 pb-3  border-bottom">
+                    Filter Search Results
+                </p>
+                <section class="d-flex flex-column gap-1">
+                    <p class="font-weight-bold fs-6 mb-0">
+                        Price
+                    </p>
+                    <div>
+                        <span class="fs-9">From</span>
+                        <input type="text" id="minPriceFilter" class="form-control bg-white" placeholder="Enter a number"
+                            aria-label="Number input" aria-describedby="number-addon">
+
+                    </div>
+                    <div class="mb-3">
+                        <span class="fs-9">Until</span>
+                        <input type="text" id="maxPriceFilter" class="form-control bg-white" placeholder="Enter a number"
+                            aria-label="Number input" aria-describedby="number-addon">
+
+                    </div>
+                    <section class="my-2 border-top pt-3">
+                        <p class="font-weight-bold fs-6 mb-0">
+                            Location
+                        </p>
+                        <p class="fs-9">
+                            You can add multiple options
+                        </p>
+                        <div>
+                            
+                        </div>
+                        <div class="mt-3">
+                            <p class="fs-9 mb-0">
+                                Search for and select a location
+                            </p>
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-white"
+                                    aria-label="Text input with dropdown button">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary dropdown-toggle border-0" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                    <div class="dropdown-menu">
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                                            <section class="my-2 border-top pt-3">
+                            <p class="font-weight-bold fs-6 mb-0">
+                                Brands
+                            </p>
+                            <p class="fs-9">
+                                You can add multiple options
+                            </p>
+                            <div>
+                                
+                                
+                            </div>
+                            <div class="mt-3">
+                                <p class="fs-9 mb-0">
+                                    Search for and select a brand
+                                </p>
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-white"
+                                        aria-label="Text input with dropdown button">
+                                    <div class="input-group-append ">
+                                        <button class="btn btn-outline-secondary dropdown-toggle border-0" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                        <section class="my-2 border-top pt-3">
+                            <p class="font-weight-bold fs-6 mb-0">
+                                Build Type
+                            </p>
+                            <p class="fs-9">
+                                You can add multiple options
+                            </p>
+                            <div>
+
+                                
+                            </div>
+                            <div class="mt-3">
+                                <p class="fs-9 mb-0">
+                                    Search for and select a build type
+                                </p>
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-white"
+                                        aria-label="Text input with dropdown button">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary dropdown-toggle border-0" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        
+                    
+
+
+
+
+                </section>
+                <button class="btn text-decoration-underline  text-danger  " type="button" id="resetFiltersButton">
+
+                    Reset</button>
+                <button class="btn btn-danger my-3 text-white  my-sm-0 w-100" type="submit">
+                    <i class="fa fa-search text-white mr-2"></i>
+                    Apply filters</button>
+            </form>
+
+
+
+            <div>
+
+                <div class=" mb-3 px-lg-2 mobile-none">
+                    <div class="d-flex flex-wrap-reverse   flex-lg-row flex-column-reverse justify-content-between"
+                        style="gap:0.4rem;">
+                        <div class="row pl-1 d-flex flex-lg-row flex-column input-wrapper py-0">
+                            <span class="input-group">
+                                <span class="input-group-text border-0 p-0"
+                                    style="position: relative;border-right: none; background: none;"
+                                    id="search-discussions">
+                                    <i class="fa fs-6 fa-search text-black-50 p-0"></i>
+                                </span>
+                                <input type="text" class="form-control rounded border-0 mx-1"
+                                    style="background: none; border-left: none;" placeholder="Toyota Land Cruiser Prado"
+                                    aria-label="search-discussions" aria-describedby="search-discussions">
+
+                                <p class="fs-9 my-auto">Sort by</p>
+                                <div class="btn-group ml-2 mr-2 mx-lg-3">
+                                    <button type="button" class="btn btn-outline-secondary dropdown-toggle fs-9 border-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dealer
+                                    </button>
+                                    <!-- <i class="fa fa-search text-black-50 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i> -->
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item fs-9" type="button">Price</button>
+                                        <button class="dropdown-item fs-9" type="button">Year</button>
+                                        <button class="dropdown-item fs-9" type="button">Location</button>
+                                    </div>
+                                </div>
+                            </span>
+
+                        </div>
+                        <button class="btn btn-danger fs-9 text-white my-2 my-sm-0" type="submit">
+                            <i class="fa fa-search text-white mr-2"></i>
+                            New Search</button>
+
+                    </div>
+
+
+
+                </div>
+                
+
+                <section>
+                    <div class="row all-offers flex-wrap justify-content-center justify-content-lg-start my-3"
+                        style="grid-row-gap: 2.5rem" id="carListContainer">
+
+                        
+
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <script>
+        function creatCarCard(car) {
+            const {
+                slug,
+                inspected,
+                name,
+                featured_reviews,
+                prices,
+                supplier,
+                photos,
+                categories,
+                num_of_images,
+                date_created,
+                year,
+                location,
+                document,
+                brandName
+            } = car;
+
+            let model
+            if (name.toLowerCase().includes(brandName.toLowerCase())) {
+                model = name.toLowerCase().replace(brandName.toLowerCase() + ' ', '');
+                model = model.replace(/ /g, '-');
+            } else {
+                model = name.toLowerCase().replace(/ /g, '-');
+            }
+
+
+            // Format the date_created into a time difference (in days)
+            const today = new Date();
+            const currentDate = today.getTime();
+            const carCreationDate = date_created * 1000;
+            const timeDifferenceInMs = currentDate - carCreationDate;
+            const timeDifferenceInDays = Math.floor(timeDifferenceInMs / (1000 * 60 * 60 * 24));
+            const formattedPrice = new Intl.NumberFormat('en-NG', {
+                style: 'currency',
+                currency: 'NGN',
+                minimumFractionDigits: 0,
+            }).format(prices);
+
+            return `
+            <a href="${brandName}/${model}/for-sale/${slug}" class="col-4 card px-0 m-0 border-0">
+                <div class="card rounded m-0">
+                    <div class="card-image m-0 ">
+                        
+                        <a href="${brandName}/${model}/for-sale/${slug}" class="flex-grow-1">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="${photos}"
+                                    class="card-img-top mx-auto img-fluid text-center" alt="${name}" style="object-fit:cover">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="car-body mt-2 flex-grow-1">
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                            <h3 class="card-text">
+                                <a class="text-decoration-none" href="${brandName}/${model}/for-sale/${slug}">${name}</a>
+                            </h3>
+                            <span class="card-text text-danger">
+                                <i class="fas fa-star"></i> ${featured_reviews}
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-between px-1 gap-1 my-1">
+                            <h4 class="fw-bold fs-7 mb-0">
+                                <i class="fa fa-fw fa-calendar"></i> ${year}
+                            </h4>
+                            <h4 class="fw-bold fs-7 mb-0">
+                                <i class="fa fa-fw fa-car"></i> ${ 'Foreign Used'}
+                            </h4>
+                            <p class="fw-bold fs-8  mb-0">
+                                <i class="fa fa-fw fa-clock"></i> 56,452 mi
+                            </p>
+                            <p class="fw-bold fs-8 mb-0 ">
+                                <i class="fa fa-fw fa-gas-pump"></i> ${ 'Petrol'}
+                            </p>
+                        </div>
+                        <div class="bg-white d-flex seller-info align-items-center">
+                            <div class="seller">
+                                <img src="img/seller.jpeg" class="w-4" alt="">
+                            </div>
+                            <h3 class="fs-7 fw-bolder m-0">
+                                ${supplier }
+                            </h3>
+                        </div>
+                        <div class="d-flex justify-content-between  align-items-center px-2 mb-3">
+                            <h4 class="fs-6 mb-0">
+                                <i class="fa fa-fw mr-1 fa-location-arrow"></i>
+                                ${location }
+                            </h4>
+                            <p class="text-danger fs-6 mb-0 fw-bold">
+                                ${formattedPrice  }
+                            </p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <a href="${brandName}/${model}/for-sale/${slug}" class="btn btn-danger text-white w-75">View Details</a>
+                            <div class="desc d-flex justify-content-between align-items-baseline px-auto md-px-4 py-2">
+                                <span class="card-text px-2">
+                                    <span class="badge badge-light px-3 py-2 text-black">
+                                        *listed ${timeDifferenceInDays} days ago
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        
+    `;
+        }
+
+        const alloffers = [
+                    ];
+
+
+        function getCheckboxValues(name) {
+            const checkboxes = document.querySelectorAll(`input[type="checkbox"][name="${name}"]:checked`);
+            const selectedValues = [];
+
+            checkboxes.forEach((checkbox) => {
+                selectedValues.push(checkbox.value.toLowerCase());
+            });
+
+            return selectedValues;
+        }
+
+        function updateCarListComponent(filteredData) {
+            const carListContainer = document.getElementById(
+                "carListContainer"
+            );
+
+            // Clear the previous content of the container
+            carListContainer.innerHTML = "";
+
+            // Loop through the filteredData and create new elements to display the filtered cars
+            filteredData.forEach((car) => {
+                // Create a new car element
+                const brandCardHTML = creatCarCard(car);
+                const listItem = document.createElement("div");
+                listItem.className = "col-12 col-md-6 col-lg-4 car-container border-0";
+                listItem.innerHTML = brandCardHTML;
+                carListContainer.appendChild(listItem);
+            });
+        }
+        // Default: Show all cars by passing the entire array to the updateCarListComponent function
+        updateCarListComponent(alloffers.slice(0, 30));
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+
+            // Function to format the number with commas
+            function formatNumberWithCommas(value) {
+                return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+            // Get the input element
+            const priceInput = document.getElementById('minPriceFilter');
+            const priceInput2 = document.getElementById('maxPriceFilter');
+
+            // Listen for the 'input' event and format the number with commas
+            priceInput.addEventListener('input', function() {
+                const formattedValue = formatNumberWithCommas(this.value.replace(/,/g, ''));
+                this.value = formattedValue;
+            });
+
+            priceInput2.addEventListener('input', function() {
+                const formattedValue = formatNumberWithCommas(this.value.replace(/,/g, ''));
+                this.value = formattedValue;
+            });
+
+
+            // Adding event listener to a button to apply the filter
+            document.getElementById("filterForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+
+                const locationValues = getCheckboxValues("location");
+                const brandValues = getCheckboxValues("brand");
+                const categoryValues = getCheckboxValues("category");
+                const yearValues = getCheckboxValues("year");
+
+                const minPriceFilterInput = document.getElementById("minPriceFilter");
+                const minPriceFilterValue = parseFloat(minPriceFilterInput.value.replace(/,/g, '').replace(
+                    /\s/g, ''));
+                const minPriceFilter = minPriceFilterValue
+
+                const maxPriceFilterInput = document.getElementById("maxPriceFilter");
+                const maxPriceFilterValue = parseFloat(maxPriceFilterInput.value.replace(/,/g, '').replace(
+                    /\s/g, ''));
+                const maxPriceFilter = maxPriceFilterValue
+
+
+
+
+
+                const filteredArray = alloffers.filter(function(item) {
+                    // console.log(minPriceFilter)
+                    let priceCheck = true;
+                    let locationCheck = true;
+                    let brandCheck = true;
+                    let categoryCheck = true;
+                    let yearCheck = true;
+
+                    if (minPriceFilter && maxPriceFilter) {
+                        const price = parseFloat(item.document.prices.actual
+                            .NGN); // Convert the price to a numeric value
+                        priceCheck = minPriceFilter <= price && price <= maxPriceFilter;
+                    }
+
+                    if (locationValues.length) {
+                        const location = item.document.supplier_state;
+                        locationCheck = locationValues.includes(location.toLowerCase());
+
+                    }
+
+                    if (brandValues.length) {
+                        const brand = item.document.categories.brand[0];
+                        brandCheck = brandValues.includes(brand.toLowerCase());
+
+                    }
+
+                    if (categoryValues.length) {
+                        const category = item.document.categories.car_categories[0];
+                        categoryCheck = categoryValues.includes(category.toLowerCase());
+
+                    }
+
+                    if (yearValues.length) {
+                        const year = item.document.categories.year[0];
+                        yearCheck = yearValues.includes(year);
+
+                    }
+
+                    result = priceCheck && locationCheck && brandCheck && categoryCheck &&
+                        yearCheck;
+
+                    return result;
+                });
+
+
+                updateCarListComponent(filteredArray);
+
+            });
+            document.getElementById("resetFiltersButton").addEventListener("click", function(event) {
+                event.preventDefault();
+
+                // Clear filter values for location and brand
+                const locationCheckboxes = document.querySelectorAll(
+                    'input[type="checkbox"][name="location"]:checked');
+                locationCheckboxes.forEach((checkbox) => {
+                    checkbox.checked = false;
+                });
+
+                const brandCheckboxes = document.querySelectorAll(
+                    'input[type="checkbox"][name="brand"]:checked');
+                brandCheckboxes.forEach((checkbox) => {
+                    checkbox.checked = false;
+                });
+
+                // Clear input fields for min and max price filters
+                document.getElementById("minPriceFilter").value = '';
+                document.getElementById("maxPriceFilter").value = '';
+
+                // Display all cars again
+                updateCarListComponent(alloffers.slice(0, 30));
+            });
+        });
+    </script>
+
+    </div>
+    <footer>
+                <div class="container px-0 footer">
+            <div class="ml-auto mr-auto subscribe">
+                <h2>Want to know what’s hot on Cars.ng?</h2>
+                <p>Subscribe to our newsletter and be the first to know</p>
+
+                <form method="POST" action="https://cars.ng/newsletter/submit" id="newsletter"
+                    class="my-2 form-inline my-lg-0">
+                    <input type="hidden" name="_token" value="KZwEHEezrTFHOSsu3S9X3BbEvptAMfyAAHzL1jRm">                    <input class="shadow-none form-control mr-sm-2 col-md-4 footer-email" id="name"
+                        type="text" name="name" required placeholder="Enter name" aria-label="name">
+                    <input class="shadow-none form-control mr-sm-2 col-md-5 footer-email" id="email"
+                        type="email" name="email" required placeholder="Enter email" aria-label="email">
+                    <button class="my-2 btn btn-danger my-sm-0 newsletter-sub text-white"
+                        type="submit">Submit</button>
+                </form>
+
+            </div>
+            <div class="footer-links row">
+                <div class="col-sm-3">
+                    <h3 class="fs-5">Company</h3>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none" href="https://cars.ng/about">About us</a>
+                    </h4>
+                    
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none" href="/faq">FAQ</a>
+                    </h4>
+                    <h4 class="fs-6">
+                        <a class="text-decoration-none" href="https://hng.tech/internship">HNG Internship</a>
+                    </h4>
+                </div>
+                <div class="col-sm-3">
+                    <h3 class="fs-5">Most Researched Car</h3>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none"
+                            href="/toyota/camry/2018/pricing ">Toyota Camry</a>
+                    </h4>
+                    <h4 class="fs-6">
+                        <a class="text-decoration-none"
+                            href="/honda/accord/2020/pricing ">Honda Accord</a>
+                    </h4>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none"
+                            href="/kia/rio/2020/pricing  ">Kia Rio</a>
+                    </h4>
+
+                    <h4 class="fs-6">
+                        <a class="text-decoration-none"
+                            href="/toyota/corolla/2020/pricing ">Toyota Corolla</a>
+                    </h4>
+
+                </div>
+                <div class="col-sm-3">
+                    <h3 class="fs-5">Location</h3>
+                    <h4 class="fs-6">
+                        13 Command Road,Yaba
+                        <br> Lagos,Nigeria
+
+                    </h4>
+                </div>
+                <div class="col-sm-3">
+                    <h3 class="fs-5">Contact</h3>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none" href="tel:+2341234567890">+234 123 456 7890</a>
+
+                    </h4>
+                    <h4 class="fs-6">
+
+                        <a class="text-decoration-none" href="mailto:Hello@cars.ng">Hello@cars.ng</a>
+
+                    </h4>
+                </div>
+            </div>
+            <hr class="border-0 bg-whit">
+            <p id="copyright">Copyright © 2024 Cars.ng</p>
+        </div>
+    </footer>
+
+        <script>
+        // const a = jQuery.noConflict();
+        document.getElementById('newsletter').addEventListener('submit', function(event) {
+            // event.preventDefault(); // prevent the form from submitting normally
+
+        });
+
+        // $(document).ready(function(){
+        //   $.ajaxSetup({
+        //     headers: {
+        //       'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+        //     }
+        //   });
+        //   $('.newsletter-sub').on('click', function () {
+        //     let email_re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        //     if ( $("#email-1").val() && $("#name-1").val() ) {
+        //       var email = $("#email-1").val()
+        //       var name = $("#name-1").val()
+        //       var type = $("#type").val()
+        //       var car_id = $("#car_id").val()
+        //     } else {
+        //       var email = $("#email").val()
+        //       var name = $("#name").val()
+        //     }
+
+        //     if ( (name?.length ?? 0) < 3 ) {
+        //       return swal({
+        //         title: 'Failed!!',
+        //         text: 'Name should be at least three characters',
+        //         icon: 'error'
+        //       })
+        //     } else if (!email_re.test(email.toLowerCase())) {
+        //       return swal({
+        //         title: 'Failed!!',
+        //         text: 'Please enter a valid email address',
+        //         icon: 'error'
+        //       })
+        //     }
+        //     $.ajax({
+        //       type: 'POST',
+        //       url: 'https://cars.ng/newsletter',
+        //       data: {name, email : email, car_id : car_id, type:type},
+        //       dataType: 'json',
+        //       success: function (data) {
+        //         if (data.status === 'successful') {
+        //           return swal({
+        //             title: 'Success!!',
+        //             text: "Your subscription was successful",
+        //             icon: 'success'
+        //           }).then(
+        //             (e) => {
+        //               $("#email").val('')
+        //               $("#email-1").val('')
+        //               $("#name-1").val('')
+        //             }
+        //           )
+        //         }
+
+        //         if (data.status === 'already') {
+        //           return swal({
+        //             title: 'Success!!',
+        //             text: "Your subscription was already saved",
+        //             icon: 'success'
+        //           }).then(
+        //             (e) => {
+        //               $("#email").val('')
+        //               $("#email-1").val('')
+        //               $("#name-1").val('')
+        //             }
+        //           )
+        //         }
+        //       },
+
+        //       error: function (data) {
+        //         return swal({
+        //           title: 'Failed!!',
+        //           text: 'Error occurred saving subscription, please try again.',
+        //           icon: 'error'
+        //         })
+        //       }
+        //     });
+        //   })
+
+        $('.year-variants').slick({
+        infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 5,
+        arrows: true,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 4
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 580,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+        });
+        })
+    </script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script> -->
+    <script src="https://cars.ng/js/zooming.js"></script>
+    <script src="https://cars.ng/js/dealerlist.js"></script>
+    <script>
+        //Zoom gallery image
+        new Zooming().listen('.gal-zoom');
+    </script>
+
+    <script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'KZwEHEezrTFHOSsu3S9X3BbEvptAMfyAAHzL1jRm';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+</body>
+
+</html>

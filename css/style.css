@@ -45,7 +45,7 @@ body {
 .car-type .card:hover,
 .recent-cars .card:hover,
 .popular-car .card:hover {
-	border: 1px solid red;
+	border: 1px solid #242424;
 	background-color: #f2f2f2;
 }
 
@@ -74,7 +74,7 @@ nav button {
 }
 
 .navbar-brand {
-	color: #f72036 !important;
+	color: #242424 !important;
 	font-weight: 800;
 	font-style: normal;
 	font-weight: 800;
